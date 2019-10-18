@@ -189,7 +189,7 @@ function updateCards(votes) {
             const singleVote = votes[user];
             for (const vote in singleVote) {
                 if (singleVote.hasOwnProperty(vote)) {
-                    if (parseInt(singleVote[vote]) == 'NaN') {
+                    if (singleVote[vote] == '?') {
                         var result = '?';
                         var nanVote = true;
                     } else{
