@@ -59,8 +59,9 @@ socket.on("user-disconnected", user => {
 });
 
 socket.on("reset-page", () => {
-    reset();
-    reset();
+    for (let index = 0; index < 10; index++) {
+        reset();
+    }
 });
 
 /*
