@@ -1,3 +1,8 @@
+/*
+================================================================================================================
+Front-End Javascript File
+================================================================================================================
+*/
 const port = 80;
 const socket = io(); // initialize our socket.io variable
 const cardForm = document.getElementById("card-container"); // card container element

@@ -1,4 +1,0 @@
-bin/www - update port variable to use port 80
-javascripts/script.js 
-    -update socket constant to io('http://73.187.60.87:')
-    -update the port constant to 80
