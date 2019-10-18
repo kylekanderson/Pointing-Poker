@@ -1,5 +1,5 @@
 const port = 80;
-const socket = io("https://pointing-poker.herokuapp.com:" + port); // initialize our socket.io variable
+const socket = io(); // initialize our socket.io variable
 const cardForm = document.getElementById("card-container"); // card container element
 const resetContainer = document.getElementById("reset-container"); // reset button container
 const name = prompt("What is your name?"); // get the users name
