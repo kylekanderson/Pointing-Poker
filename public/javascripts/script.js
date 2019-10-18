@@ -189,7 +189,13 @@ function updateCards(votes) {
             const singleVote = votes[user];
             for (const vote in singleVote) {
                 if (singleVote.hasOwnProperty(vote)) {
-                    var result = parseInt(singleVote[vote]);
+                    if (parseInt(singleVote[vote]) == 'NaN') {
+                        var result = '?';
+                        var nanVote = true;
+                    } else{
+                        var result = parseInt(singleVote[vote]);
+                    }
+                    
                     var resultSpace = document.createElement("p");
                     voteCount = voteCount + 1;
                     consoleLog(result);
@@ -203,7 +209,11 @@ function updateCards(votes) {
     consoleLog(voteCount);
     var breakPoint = document.createElement("br");
     resultSpace.appendChild(breakPoint);
-    var voteAverage = voteSum / voteCount;
+    if (nanVote) {
+        voteAverage = '?';
+    } else{
+        var voteAverage = voteSum / voteCount;
+    }
     consoleLog("vote average: " + voteAverage);
     drawStats(voteAverage);
 }
