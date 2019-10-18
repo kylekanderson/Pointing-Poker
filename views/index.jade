@@ -1,0 +1,44 @@
+doctype html
+html(lang='en')
+  head
+    // Required meta tags
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='Description', content='A web application to track Agile pointing poker')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(href="https://fonts.googleapis.com/css?family=Oswald|Roboto&display=swap" rel="stylesheet")
+    link(rel='icon', href='public/images/favicon.ico')
+    script(defer='', src='/socket.io/socket.io.js')
+    //- script(defer='', src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js')
+    script(defer='', src='/javascripts/script.js')
+    title Pointing Poker
+  body
+    heading
+      h1 Pointing Poker
+    .row
+      //using columns here to separate content on the page
+      .column
+        //this container will get filled with the playing cards and voting results
+        #voting-container
+          h2 Voting
+        //this is the form containing the voting and reset buttons
+        form#card-container
+          button#vote-0.votingButton(type='submit') 0
+          button.votingButton(type='submit', id='vote-0.5') 1/2
+          button#vote-1.votingButton(type='submit') 1
+          button#vote-2.votingButton(type='submit') 2
+          button#vote-3.votingButton(type='submit') 3
+          button#vote-5.votingButton(type='submit') 5
+          button#vote-8.votingButton(type='submit') 8
+          button#vote-13.votingButton(type='submit') 13
+          button#vote-20.votingButton(type='submit') 20
+          button#vote-40.votingButton(type='submit') 40
+          button#vote-100.votingButton(type='submit') 100
+          button.votingButton(type='submit', id='vote-?') ?
+        br
+        form#reset-container
+          button.resetButton(type='reset') Reset
+      .column
+        //this is the container used for the roster
+        #message-container
+          h2 Roster

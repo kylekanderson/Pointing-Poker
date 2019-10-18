@@ -1,0 +1,25 @@
+{
+  "name": "pointing_poker",
+  "version": "1.0.0",
+  "description": "simple node.js app built on the express framework to track pointing poker (SWDV-620 final project)",
+  "main": "app.js",
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "http-errors": "^1.7.3",
+    "jade": "^1.11.0",
+    "morgan": "^1.9.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha",
+    "start": "node bin/www"
+  },
+  "author": "Kyle Anderson <kylekanderson@gmail.com> (https://www.kylekanderson.com)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "http://www.github.com/kylekanderson"
+  }
+}

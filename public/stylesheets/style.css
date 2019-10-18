@@ -1,0 +1,92 @@
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+  
+  /* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+heading {
+    margin: 1em 0 0.5em 0;
+	font-weight: 200;
+    font-family: 'Oswald', sans-serif;
+	position: relative;  
+	font-size: 150%;
+	line-height: 40px;
+	color: #355681;
+	border-radius: 0 10px 0 10px;
+    
+}
+
+body {
+    display: flexbox;
+    background-color: #dcdbda;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 10pt;
+    line-height: 20%;
+}
+
+button {
+    background-color: #555555;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.pokerCard {
+    height: 200px;
+}
+
+.votingButton {
+    height: 50px;
+    width: 50px;
+    border: 1px solid gray;
+}
+
+.resetButton {
+    height: 50px;
+    width: 100px;
+    text-align: center;
+}
+
+.resultHeader {
+    font-weight: bold;
+}
+
