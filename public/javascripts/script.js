@@ -9,7 +9,7 @@ const cardForm = document.getElementById("card-container"); // card container el
 const resetContainer = document.getElementById("reset-container"); // reset button container
 const votingContainer = document.getElementById("voting-container"); // get the voting container element
 const messageContainer = document.getElementById("message-container"); // roster container
-const name = getUserName(); // get the users name
+var name = getUserName(); // get the users name
 
 var votingFinished = false; // used to track if each vote is the last vote or not
 
@@ -44,19 +44,19 @@ var btn = document.getElementById("aboutButton");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 // When the user clicks the button, open the modal
-btn.onclick = function() {
+btn.onclick = function () {
     modal.style.display = "block";
-}
+};
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+span.onclick = function () {
     modal.style.display = "none";
-}
+};
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == modal) {
-    modal.style.display = "none";
+        modal.style.display = "none";
     }
-}
+};
 
 /*
 ================================================================================================================
@@ -101,14 +101,13 @@ Functions
 ================================================================================================================
 */
 function getUserName() {
-    userName = prompt("What is your name?");
+    userName = window.prompt("What is your name?");
     while (userName == "" || userName == null) {
         alert("Invalid username. Please re-enter.");
         userName = prompt("What is your name?");
     }
     return userName;
 }
-
 
 // if the voting container only contains 1 element, then there's only 1 user connected
 function firstLoad() {
@@ -230,13 +229,13 @@ function updateCards(votes) {
             const singleVote = votes[user];
             for (const vote in singleVote) {
                 if (singleVote.hasOwnProperty(vote)) {
-                    if (singleVote[vote] == '?') {
-                        var result = '?';
+                    if (singleVote[vote] == "?") {
+                        var result = "?";
                         var nanVote = true;
-                    } else{
+                    } else {
                         var result = parseInt(singleVote[vote]);
                     }
-                    
+
                     var resultSpace = document.createElement("p");
                     voteCount = voteCount + 1;
                     consoleLog(result);
@@ -251,8 +250,8 @@ function updateCards(votes) {
     var breakPoint = document.createElement("br");
     resultSpace.appendChild(breakPoint);
     if (nanVote) {
-        voteAverage = '?';
-    } else{
+        voteAverage = "?";
+    } else {
         var voteAverage = voteSum / voteCount;
     }
     consoleLog("vote average: " + voteAverage);
