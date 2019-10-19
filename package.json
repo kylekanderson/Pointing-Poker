@@ -13,7 +13,6 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "mocha",
     "start": "node bin/www"
   },
   "author": "Kyle Anderson <kylekanderson@gmail.com> (https://www.kylekanderson.com)",
