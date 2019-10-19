@@ -75,7 +75,7 @@ Functions
 ================================================================================================================
 */
 function getUserName() {
-    userNamme = prompt("What is your name?");
+    userName = prompt("What is your name?");
     while (userName == "" || userName == null) {
         alert("Invalid username. Please re-enter.");
         userName = prompt("What is your name?");
