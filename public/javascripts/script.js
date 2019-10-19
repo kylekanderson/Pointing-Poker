@@ -7,9 +7,9 @@ const port = 80;
 const socket = io(); // initialize our socket.io variable
 const cardForm = document.getElementById("card-container"); // card container element
 const resetContainer = document.getElementById("reset-container"); // reset button container
-const name = getUserName(); // get the users name
 const votingContainer = document.getElementById("voting-container"); // get the voting container element
 const messageContainer = document.getElementById("message-container"); // roster container
+const name = getUserName(); // get the users name
 
 var votingFinished = false; // used to track if each vote is the last vote or not
 
