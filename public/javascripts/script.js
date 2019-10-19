@@ -7,7 +7,7 @@ const port = 80;
 const socket = io(); // initialize our socket.io variable
 const cardForm = document.getElementById("card-container"); // card container element
 const resetContainer = document.getElementById("reset-container"); // reset button container
-const name = prompt("What is your name?"); // get the users name
+const name = getUserName(); // get the users name
 const votingContainer = document.getElementById("voting-container"); // get the voting container element
 const messageContainer = document.getElementById("message-container"); // roster container
 
@@ -74,6 +74,16 @@ socket.on("reset-page", () => {
 Functions
 ================================================================================================================
 */
+function getUserName() {
+    userNamme = prompt("What is your name?");
+    while (userName == "" || userName == null) {
+        alert("Invalid username. Please re-enter.");
+        userName = prompt("What is your name?");
+    }
+    return userName;
+}
+
+
 // if the voting container only contains 1 element, then there's only 1 user connected
 function firstLoad() {
     consoleLog(votingContainer.childElementCount);
