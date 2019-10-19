@@ -36,6 +36,7 @@ resetContainer.addEventListener("reset", e => {
 var aboutBtn = document.getElementById("aboutButton");
 var span = document.getElementsByClassName("close")[0];
 aboutBtn.onclick = function () {
+    e.preventDefault();
     modal.style.display = "block";
 }
 // When the user clicks on <span> (x), close the modal
