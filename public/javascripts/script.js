@@ -10,6 +10,7 @@ const resetContainer = document.getElementById("reset-container"); // reset butt
 const name = getUserName(); // get the users name
 const votingContainer = document.getElementById("voting-container"); // get the voting container element
 const messageContainer = document.getElementById("message-container"); // roster container
+const modal = document.getElementById("aboutModal");
 
 var votingFinished = false; // used to track if each vote is the last vote or not
 
@@ -31,6 +32,22 @@ resetContainer.addEventListener("reset", e => {
     e.preventDefault(); // prevent the page from reloading
     socket.emit("reset"); // emit the reset command to the socket
 });
+
+var aboutBtn = document.getElementById("aboutButton");
+var span = document.getElementsByClassName("close")[0];
+aboutBtn.onclick = function () {
+    modal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
 
 /*
 ================================================================================================================
