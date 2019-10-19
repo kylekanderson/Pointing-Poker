@@ -41,7 +41,15 @@ html(lang='en')
           button.resetButton(type='reset') Reset
         br
         form#about-container
-          button.aboutButton About
+          // Trigger/Open The Modal
+          button#aboutButton About
+            // The Modal
+            #aboutModal.modal
+              // Modal content
+              .modal-content
+                span.close &times;
+                |     
+                p Some text in the Modal..
       .column
         //this is the container used for the roster
         #message-container
