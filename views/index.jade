@@ -10,7 +10,6 @@ html(lang='en')
     link(href="https://fonts.googleapis.com/css?family=Oswald|Roboto&display=swap" rel="stylesheet")
     link(rel='icon', href='public/images/favicon.ico')
     script(defer='', src='/socket.io/socket.io.js')
-    //- script(defer='', src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js')
     script(defer='', src='/javascripts/script.js')
     title Pointing Poker
   body
@@ -37,19 +36,20 @@ html(lang='en')
           button#vote-100.votingButton(type='submit') 100
           button.votingButton(type='submit', id='vote-?') ?
         br
+        //simple container for the reset button form
         form#reset-container
           button.resetButton(type='reset') Reset
         br
         button#aboutButton About
-        // The Modal
+        //the About modal
         #aboutModal.modal
-          // Modal content
+          //modal content
           .modal-content
             span.close ×
             p Built By Kyle Anderson
             p SWDV-620: Web Applications
             p Final Project
       .column
-        //this is the container used for the roster
+        //container used for the roster
         #message-container
           h2 Roster
