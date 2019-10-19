@@ -11,6 +11,7 @@ const name = getUserName(); // get the users name
 const votingContainer = document.getElementById("voting-container"); // get the voting container element
 const messageContainer = document.getElementById("message-container"); // roster container
 const modal = document.getElementById("aboutModal");
+const aboutContainer = document.getElementById("about-container");
 
 var votingFinished = false; // used to track if each vote is the last vote or not
 
@@ -33,11 +34,14 @@ resetContainer.addEventListener("reset", e => {
     socket.emit("reset"); // emit the reset command to the socket
 });
 
+aboutContainer.addEventListener("about", e => {
+    e.preventDefault();
+    modal.style.display = "block";
+})
+
 var aboutBtn = document.getElementById("aboutButton");
 var span = document.getElementsByClassName("close")[0];
 aboutBtn.onclick = function () {
-    e.preventDefault();
-    modal.style.display = "block";
 }
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
