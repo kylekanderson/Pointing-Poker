@@ -34,7 +34,7 @@ resetContainer.addEventListener("reset", e => {
     socket.emit("reset"); // emit the reset command to the socket
 });
 
-aboutContainer.addEventListener("about", e => {
+aboutContainer.addEventListener("button", e => {
     e.preventDefault();
     modal.style.display = "block";
 })
