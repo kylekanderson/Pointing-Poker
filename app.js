@@ -6,11 +6,13 @@ Back-End Javascript
 // various modules required by the express framework
 var createError = require('http-errors');
 var express = require('express');
+var favicon = require('serve-favicon');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var app = express();
+app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
